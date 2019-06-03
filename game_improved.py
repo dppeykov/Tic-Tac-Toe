@@ -68,26 +68,16 @@ def choose_first():
 
 # 6. Returns a boolean indicating whether a space on the board is freely available
 def space_check(board, position):
-  if board[position] == " ":
-    return True
-  else:
-    return False
+  return board[position] == " "
 
 # 7. Checks if the board is full and returns a boolean: True if full, False otherwise
 def full_board_check(board):
   
-  checker = []
+  for field in range(1,10):
+    if space_check(board,field):
+      return False
 
-  for space in board:
-    if space == " ":
-      checker.append("NF")
-    else:
-      checker.append("F")
-  
-  if "NF" in checker:
-    return False
-  else:
-    return True
+  return True
   
 # 8. Asks for a player's next position (as a number 1-9) and then uses the function from step 6 to check if it's a free position. If it is, then return the position for later use.
 
