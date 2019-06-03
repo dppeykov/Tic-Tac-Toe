@@ -59,12 +59,11 @@ def win_check(board, mark):
 
 # 5. Uses random to decide which player goes first
 def choose_first():
+  print("\nThe game will randomly choose which player goes first. \n\n")
   
   if random.randint(0,1) == 0:
-    print("\nThe game will randomly choose which player goes first. \n\n")
     return 0
   else:
-    print("\nThe game will randomly choose which player goes first. \n\n")
     return 1
 
 # 6. Returns a boolean indicating whether a space on the board is freely available
